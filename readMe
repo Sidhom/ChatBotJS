@@ -1,0 +1,9 @@
+Cette application est un chatbot en js utilisant langchain  et llama-3.2-3b-preview comme modèle
+
+Pour lancer l'applciation en local, il faut faire un git clone puis un npm install 
+
+par la suite lancer le serveur : GROQ_API_KEY="your-groq-api-key" node ./app.js
+
+Enjoy !!!
+
+

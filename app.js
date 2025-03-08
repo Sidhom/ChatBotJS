@@ -20,15 +20,14 @@ app.use((req, res, next) => {
 app.use(express.static('.'));
 app.use(express.json());
 
-const pdfLoader = new PDFLoader("test.pdf");
-const secondPdfLoader = new PDFLoader("MaroueneAimeNour.pdf")
-const pdfDocs = await pdfLoader.load();
+const pdfLoader = new PDFLoader("sport.pdf");
+const secondPdfLoader = new PDFLoader("Amour.pdf")
 const pdfDoc = await secondPdfLoader.load();
 
 const llm =  new ChatGroq({
     model: "llama-3.2-3b-preview",
     temperature: 0.5,
-    apiKey: "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"
+    apiKey: process.env.GROQ_API_KEY
 })
 const prompt = ChatPromptTemplate.fromTemplate(`
         "Réponds à la question de l'utilisateur. Utilise le contexte pour répondre si besoin.
