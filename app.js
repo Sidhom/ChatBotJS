@@ -48,7 +48,7 @@ app.post('/chat', async(req, res) => {
 
     const response = await chain.invoke({
         input: userMessage,
-         context: [...pdfDoc]
+        //  context: [...pdfDoc]
     })
     res.json({ response: response })
 })

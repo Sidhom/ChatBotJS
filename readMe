@@ -2,6 +2,9 @@ Cette application est un chatbot en js utilisant langchain  et llama-3.2-3b-prev
 
 Pour lancer l'applciation en local, il faut faire un git clone puis un npm install 
 
+Il faut télécharger et installer ollama : https://ollama.com/download
+Il faut créer un compte sur groq.com et créer un api key (c'est grauit)
+
 par la suite lancer le serveur : GROQ_API_KEY="your-groq-api-key" node ./app.js
 
 Enjoy !!!
