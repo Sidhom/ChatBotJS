@@ -12,17 +12,13 @@ app.use((req, res, next) => {
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Methods', 'GET,POST, OPTIONS');
     res.header('Access-Control-Allow-Headers', 'Content-Type');
-    if(req.method === 'OPTIONS' ){
-        res.sendStatus(200)
-    }
     next()
 })
 app.use(express.static('.'));
 app.use(express.json());
 
 const pdfLoader = new PDFLoader("sport.pdf");
-const secondPdfLoader = new PDFLoader("Amour.pdf")
-const pdfDoc = await secondPdfLoader.load();
+const pdfDoc = await pdfLoader.load();
 
 const llm =  new ChatGroq({
     model: "llama-3.2-3b-preview",
